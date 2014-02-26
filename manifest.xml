@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin_manifest xmlns="http://www.elgg.org/plugin_manifest/1.8">
-	<name>hypeThemeX</name>
-	<author>Ismayil Khayredinov - hypeJunction (ismayil.khayredinov@gmail.com)</author>
-	<version>1.0.1</version>
+	<name>procuraHypeThemeX</name>
+	<author>Javier Liarte (jliarte@gmail.com)</author>
+	<version>0.0.1</version>
 	<category>theme</category>
-	<description>Elgg theme with a SASS compiler</description>
-	<website>http://hypeJunction.com/</website>
-	<copyright>2013 (c) Ismayil Khayredinov</copyright>
+	<description>Procura ACV theme based on Ismayil Khayredinov - hypeJunction Elgg theme with a SASS compiler</description>
+	<website>https://github.com/javierLiarte/procuraHypeThemeX</website>
+	<copyright>2014 (c) Javier Liarte</copyright>
 	<license>GNU General Public License version 2</license>
 	<requires>
 		<type>elgg_release</type>
 		<version>1.8</version>
 	</requires>
+	<activate_on_install>true</activate_on_install>
 </plugin_manifest>
