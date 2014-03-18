@@ -457,7 +457,7 @@ body {
 
 /* line 301, ../../../sass/init/foundation/components/_global.scss */
 body {
-  background: #f4f4f4;
+  background: #dddddd;
   color: #222222;
   padding: 0;
   margin: 0;
@@ -11136,4 +11136,24 @@ form .mceEditor, .elgg-form .mceEditor {
 /* line 40, ../../../sass/init/elgg/plugins/_search.scss */
 .elgg-search fieldset input[type="submit"].search-submit-button {
   display: none;
+}
+
+/* line 13, ../../../sass/themes/procuraACV/theme.scss */
+.elgg-menu-site li {
+  background-color: #d7dbda;
+  -webkit-border-radius: 6px 6px;
+  -moz-border-radius: 6px / 6px;
+  border-radius: 6px / 6px;
+  margin: 0 6px;
+}
+/* line 17, ../../../sass/themes/procuraACV/theme.scss */
+.elgg-menu-site li a {
+  color: black;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+/* line 23, ../../../sass/themes/procuraACV/theme.scss */
+.elgg-menu-site li:hover a {
+  color: white;
 }

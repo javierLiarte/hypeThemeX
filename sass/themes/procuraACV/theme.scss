@@ -3,3 +3,23 @@
 
 @import "variables";
 @import "init/elgg";
+
+@import "init/foundation/components/sub-nav";
+
+//$procura-acv-radius: rem-calc(6);
+$procura-acv-radius: 6px;
+
+.elgg-menu-site {
+	li {
+		background-color: $procura-acv-color-menu-gray;
+		@include border-radius($procura-acv-radius, $procura-acv-radius);
+		margin: 0 $procura-acv-radius;
+		a { 
+			color: black;
+			text-transform: uppercase;
+			font-size: em-calc(12);
+			font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+		}
+		&:hover a { color: white; }
+	}
+}

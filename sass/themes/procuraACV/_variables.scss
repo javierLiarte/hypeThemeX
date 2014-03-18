@@ -1,6 +1,14 @@
 @import "init/foundation/variables";
 @import "init/font-awesome/variables";
 
+$procura-acv-color-blue: #4b86a4;
+$procura-acv-color-menu-gray: #d7dbda;
+$procura-acv-color-bg-gray: #dddddd;
+$procura-acv-color-bg-main-gray: #eaece7;
+$procura-acv-color-footer-bg-gray: #363636;
+$procura-acv-color-footer-bg-gray2: #434345;
+$procura-acv-color-inactive-yellow: #ededd5;
+
 // You can load additional fonts from google
 $include-google-fonts: ("Open+Sans:400,600,700", "Open+Sans+Condensed:300,700");
 
@@ -19,8 +27,7 @@ $elgg-value-large: em-calc(12);
 $default-float: left;
 
 // Body
-//$body-bg: #f4f4f4;
-$body-bg: red;
+$body-bg: $procura-acv-color-bg-gray;
 $body-font-color: #222;
 $body-font-family: $secondary-font-stack;
 $body-font-weight: normal;

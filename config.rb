@@ -7,5 +7,5 @@ javascripts_dir = "javascripts"
 fonts_dir = "fonts"
 
 output_style = :expanded
-line_comments = false
+line_comments = true
 preferred_syntax = :scss

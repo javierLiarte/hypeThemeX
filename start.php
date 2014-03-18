@@ -2,7 +2,7 @@
 
 $theme = elgg_get_plugin_setting('theme', 'procuraHypeThemeX');
 if (!$theme) {
-	$theme = 'default';
+	$theme = 'procuraACV';
 }
 
 define('ELGG_THEME', $theme);
