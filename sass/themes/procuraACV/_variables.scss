@@ -2,12 +2,18 @@
 @import "init/font-awesome/variables";
 
 $procura-acv-color-blue: #4b86a4;
-$procura-acv-color-menu-gray: #d7dbda;
+$procura-acv-color-link-blue: #3183d1;
+$procura-acv-color-menu-gray: #dde3e1; //d7dbda
 $procura-acv-color-bg-gray: #dddddd;
 $procura-acv-color-bg-main-gray: #eaece7;
 $procura-acv-color-footer-bg-gray: #363636;
 $procura-acv-color-footer-bg-gray2: #434345;
 $procura-acv-color-inactive-yellow: #ededd5;
+$procura-acv-color-button-green: #7ba736;
+
+$procura-notifications-priority-level1-bgcolor: #ddedd3;
+$procura-notifications-priority-level2-bgcolor: #ededd5;
+$procura-notifications-priority-level3-bgcolor: #f9dee0;
 
 // You can load additional fonts from google
 $include-google-fonts: ("Open+Sans:400,600,700", "Open+Sans+Condensed:300,700");
@@ -50,7 +56,8 @@ $success-color: #396516;
 $layout-topbar-bg-color: #111;
 $layout-header-bg-color: $primary-color;
 $layout-toolbar-bg-color: darken($primary-color, 5%);
-$layout-toolbar-inner-bg-color: darken($primary-color, 20%);
+//$layout-toolbar-inner-bg-color: darken($primary-color, 20%);
+$layout-toolbar-inner-bg-color: transparent;
 $layout-body-bg-color: transparent;
 $layout-body-inner-bg-color: #fff;
 $layout-body-border-color: $border-color;

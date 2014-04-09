@@ -1,0 +1,58 @@
+@mixin tabs($gutter: $elgg-value-medium, $border-color: $border-color, $border-width: $hr-border-width) {
+
+	$border: $border-width $border-color solid;
+
+	border-bottom: $border;
+	display: table;
+	width: 100%;
+
+	li {
+
+		// border: $border;
+		border-bottom: 0;
+		@include radius($global-radius $global-radius 0 0);
+
+		// background: lighten($border-color, 15%);
+		margin: 0;
+		width: 100%;
+		a {
+			text-decoration: none;
+			display: block;
+			padding: 0 $gutter;
+			text-align: center;
+			font-size: emCalc(15px);
+			line-height: emCalc(35px);
+			color: darken($border-color, 30%);
+			// background: lighten($border-color, 5%);;
+			&:hover {
+				color: darken($border-color, 40%);
+				background: lighten($border-color, 3%);;
+			}
+		}
+
+		&.elgg-state-selected {
+			background: white;
+			border: $border;
+			border-bottom: 0;
+			a, a:hover {
+				color: darken($border-color, 40%);
+				top: $border-width;
+				background: white;
+				position: relative;
+			}
+		}
+	}
+
+	@media #{$small} {
+		@include radius(none);
+		li {
+			@include radius($global-radius $global-radius 0 0);
+			float: left;
+			width: auto;
+			margin: 0 0 0 $gutter;
+			a {
+				@include radius($global-radius $global-radius 0 0);
+			}
+		}
+	}
+}

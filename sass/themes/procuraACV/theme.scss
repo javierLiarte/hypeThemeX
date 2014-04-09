@@ -8,6 +8,7 @@
 
 //$procura-acv-radius: rem-calc(6);
 $procura-acv-radius: 6px;
+$procura-acv-row-radius: 10px;
 
 .elgg-menu-site {
 	li {
@@ -22,4 +23,191 @@ $procura-acv-radius: 6px;
 		}
 		&:hover a { color: white; }
 	}
+}
+
+/* layout and colors */
+
+.elgg-page-header .elgg-inner,
+.elgg-layout {
+	//@include box-shadow(rgba(blue, 0.4) 0 0 25px, rgba(green, 0.2) 0 0 3px 1px inset);
+	@include box-shadow(gray 10px 0px 10px -7px,
+						gray -10px 0px 10px -7px); // FIXME: remove bottom shadow
+}
+
+.elgg-page-header {
+	background-color: $procura-acv-color-bg-gray;
+	.elgg-inner {background-color: $procura-acv-color-bg-main-gray;}
+}
+
+.elgg-body.elgg-main, // FIXME!!
+.elgg-layout {
+	background-color: $procura-acv-color-bg-main-gray;
+	.elgg-inner {background-color: $procura-acv-color-bg-main-gray;}
+}
+
+.elgg-page-footer {
+  @include background-image(linear-gradient($procura-acv-color-footer-bg-gray, $procura-acv-color-footer-bg-gray2));
+}
+
+.elgg-page-body > .elgg-inner .elgg-layout > * {
+	padding-top: 4px;
+}
+
+/**** Breadcrumbs ****/
+
+.elgg-breadcrumbs {
+	background-color: none;
+	background: none;
+	margin-bottom: 0;
+	border: none;
+	li a, li span, li { text-transform: none; }
+	li:first-child:before {
+		content: "Estás en la sección: "; // TODO: this should be printed in elgg for i18n
+	}
+	li:before {
+		content: ">";
+	}
+}
+
+/* page menu tabs */
+
+fieldset {
+	background-color: white;
+	padding: 0;
+}
+
+@import "custom_mixins";
+
+UL.tabs {
+	@include tabs($gutter: 20px, $border-color: darken($procura-acv-color-bg-gray,20%));
+	margin-top: 0;
+	background-color: $procura-acv-color-bg-main-gray;
+	padding-left: 10px;
+}
+
+/* procura messages */
+
+.elgg-head.clearfix {
+	// Removing form page header
+	display: none; // TODO: check if this apply to all views!!!
+}
+
+.message-list-header {
+	padding: 0 4em;
+}
+
+DIV.messages-timestamp-cab {
+	margin-left: 40px;
+}
+
+.elgg-button-new-message {
+	float: right;
+	@include button($padding: 0.9em, $bg: $procura-acv-color-button-green, $radius: 1.8em);
+}
+
+.messages-container {
+	padding: 1em 2em;
+	min-height: $small-screen - 100px;
+	.elgg-list {
+		&.elgg-list-entity { overflow: initial;	}
+		&> li {	border: 0; }
+	}
+}
+
+.message {
+	margin-bottom: 4px;
+	@include border-radius($procura-acv-row-radius,$procura-acv-row-radius);
+	&.read {
+		border-bottom: solid 0.15em $procura-acv-color-bg-gray;
+	}
+	&.unread {
+		font-weight: bold;
+		background-color: $procura-acv-color-bg-gray;
+		a { color: black; } // Change in views/default/procura_messages/css.php:12:.message.unread a {	
+	}
+	&:hover {
+		background-color: $procura-acv-color-blue;
+		a { color: #fff; }
+	}
+	&> .elgg-body {
+		.messages-delete {
+			top: 4px;
+			right: -4px;
+			@include border-top-right-radius($procura-acv-row-radius);
+		}
+		.messages-timestamp {
+			position: inherit;
+			margin: 0;
+			padding: 0;
+			background: none;
+		}
+	}
+}
+
+.procura-message, 
+.elgg-form-procura-messages-reply {
+	padding: 1.7em;
+}
+
+/* procura_notifications */
+
+.procura-notifications {
+	background-color: #fff;
+	padding: 1.2em;
+	min-height: 740px;
+}
+
+.notification-unread-count {
+	padding-top: 0.4em;
+	padding-left: 0.6em;
+	font-size: 0.8em;
+}
+
+.notifications-header {
+	overflow: hidden;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	border-bottom: 1px solid gray;
+	div { 
+		float: left; 
+		padding: 0.2em 1em;
+	}
+	a {
+		color: lighten(black, 40%);
+		&:hover { color: $procura-acv-color-link-blue; }
+	}
+}
+
+
+.notification {
+	&.notification-priority-level1 { background-color: $procura-notifications-priority-level1-bgcolor; }
+	&.notification-priority-level2 { background-color: $procura-notifications-priority-level2-bgcolor; }
+	&.notification-priority-level3 { background-color: $procura-notifications-priority-level3-bgcolor; }
+	@include border-radius($procura-acv-row-radius,$procura-acv-row-radius);
+	&:hover { background-color: $procura-acv-color-blue; }
+	margin: 1.2em 0.6em;
+	padding: 0.4em;
+	font-size: 0.8em;
+	overflow: hidden;
+	div {
+		float: left; 
+		vertical-align: middle;
+		padding-top: 0.8em;
+	}
+	&.unread { .notification-msg { font-weight: bold; } }
+	// border: 1px solid red;
+
+	.notification-date   { width: 10%; }
+	.notification-from   { width: 10%; }
+	.notification-msg    { width: 60%; }
+	.notification-delete {
+		width: 15%;
+		padding-top: 0;
+	}
+	fieldset { 
+			margin: 0;
+			background: none;
+			border: 0;
+			.elgg-button { margin: 0; }
+		}
 }

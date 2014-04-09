@@ -8272,7 +8272,7 @@ form .mceEditor, .elgg-form .mceEditor {
 /* line 239, ../../../sass/init/elgg/components/_navigation.scss */
 .elgg-menu-site .elgg-menu-site-more > .elgg-state-selected,
 .elgg-menu-site .elgg-menu-site-more > li:hover {
-  background: #215d95;
+  background: transparent;
 }
 /* line 243, ../../../sass/init/elgg/components/_navigation.scss */
 .elgg-menu-site .elgg-more {
@@ -9605,7 +9605,7 @@ form .mceEditor, .elgg-form .mceEditor {
   margin-bottom: 0;
   max-width: 62.5em;
   *zoom: 1;
-  background: #215d95;
+  background: transparent;
   position: relative;
   min-height: 45px;
 }
@@ -11138,22 +11138,373 @@ form .mceEditor, .elgg-form .mceEditor {
   display: none;
 }
 
-/* line 13, ../../../sass/themes/procuraACV/theme.scss */
+/* line 14, ../../../sass/themes/procuraACV/theme.scss */
 .elgg-menu-site li {
-  background-color: #d7dbda;
+  background-color: #dde3e1;
   -webkit-border-radius: 6px 6px;
   -moz-border-radius: 6px / 6px;
   border-radius: 6px / 6px;
   margin: 0 6px;
 }
-/* line 17, ../../../sass/themes/procuraACV/theme.scss */
+/* line 18, ../../../sass/themes/procuraACV/theme.scss */
 .elgg-menu-site li a {
   color: black;
   text-transform: uppercase;
   font-size: 0.75em;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
-/* line 23, ../../../sass/themes/procuraACV/theme.scss */
+/* line 24, ../../../sass/themes/procuraACV/theme.scss */
 .elgg-menu-site li:hover a {
   color: white;
+}
+
+/* layout and colors */
+/* line 31, ../../../sass/themes/procuraACV/theme.scss */
+.elgg-page-header .elgg-inner,
+.elgg-layout {
+  -webkit-box-shadow: gray 10px 0px 10px -7px, gray -10px 0px 10px -7px;
+  -moz-box-shadow: gray 10px 0px 10px -7px, gray -10px 0px 10px -7px;
+  box-shadow: gray 10px 0px 10px -7px, gray -10px 0px 10px -7px;
+}
+
+/* line 37, ../../../sass/themes/procuraACV/theme.scss */
+.elgg-page-header {
+  background-color: #dddddd;
+}
+/* line 39, ../../../sass/themes/procuraACV/theme.scss */
+.elgg-page-header .elgg-inner {
+  background-color: #eaece7;
+}
+
+/* line 43, ../../../sass/themes/procuraACV/theme.scss */
+.elgg-body.elgg-main,
+.elgg-layout {
+  background-color: #eaece7;
+}
+/* line 45, ../../../sass/themes/procuraACV/theme.scss */
+.elgg-body.elgg-main .elgg-inner,
+.elgg-layout .elgg-inner {
+  background-color: #eaece7;
+}
+
+/* line 48, ../../../sass/themes/procuraACV/theme.scss */
+.elgg-page-footer {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #363636), color-stop(100%, #434345));
+  background-image: -webkit-linear-gradient(#363636, #434345);
+  background-image: -moz-linear-gradient(#363636, #434345);
+  background-image: -o-linear-gradient(#363636, #434345);
+  background-image: linear-gradient(#363636, #434345);
+}
+
+/* line 52, ../../../sass/themes/procuraACV/theme.scss */
+.elgg-page-body > .elgg-inner .elgg-layout > * {
+  padding-top: 4px;
+}
+
+/**** Breadcrumbs ****/
+/* line 58, ../../../sass/themes/procuraACV/theme.scss */
+.elgg-breadcrumbs {
+  background-color: none;
+  background: none;
+  margin-bottom: 0;
+  border: none;
+}
+/* line 63, ../../../sass/themes/procuraACV/theme.scss */
+.elgg-breadcrumbs li a, .elgg-breadcrumbs li span, .elgg-breadcrumbs li {
+  text-transform: none;
+}
+/* line 64, ../../../sass/themes/procuraACV/theme.scss */
+.elgg-breadcrumbs li:first-child:before {
+  content: "Estás en la sección: ";
+}
+/* line 67, ../../../sass/themes/procuraACV/theme.scss */
+.elgg-breadcrumbs li:before {
+  content: ">";
+}
+
+/* page menu tabs */
+/* line 74, ../../../sass/themes/procuraACV/theme.scss */
+fieldset {
+  background-color: white;
+  padding: 0;
+}
+
+/* line 81, ../../../sass/themes/procuraACV/theme.scss */
+UL.tabs {
+  border-bottom: 1px #aaaaaa solid;
+  display: table;
+  width: 100%;
+  margin-top: 0;
+  background-color: #eaece7;
+  padding-left: 10px;
+}
+/* line 9, ../../../sass/themes/procuraACV/_custom_mixins.scss */
+UL.tabs li {
+  border-bottom: 0;
+  -webkit-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  margin: 0;
+  width: 100%;
+}
+/* line 18, ../../../sass/themes/procuraACV/_custom_mixins.scss */
+UL.tabs li a {
+  text-decoration: none;
+  display: block;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 0.9375em;
+  line-height: 2.1875em;
+  color: #5e5e5e;
+}
+/* line 27, ../../../sass/themes/procuraACV/_custom_mixins.scss */
+UL.tabs li a:hover {
+  color: #444444;
+  background: #b2b2b2;
+}
+/* line 33, ../../../sass/themes/procuraACV/_custom_mixins.scss */
+UL.tabs li.elgg-state-selected {
+  background: white;
+  border: 1px #aaaaaa solid;
+  border-bottom: 0;
+}
+/* line 37, ../../../sass/themes/procuraACV/_custom_mixins.scss */
+UL.tabs li.elgg-state-selected a, UL.tabs li.elgg-state-selected a:hover {
+  color: #444444;
+  top: 1px;
+  background: white;
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  /* line 81, ../../../sass/themes/procuraACV/theme.scss */
+  UL.tabs {
+    -webkit-border-radius: none;
+    border-radius: none;
+  }
+  /* line 48, ../../../sass/themes/procuraACV/_custom_mixins.scss */
+  UL.tabs li {
+    -webkit-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+    float: left;
+    width: auto;
+    margin: 0 0 0 20px;
+  }
+  /* line 53, ../../../sass/themes/procuraACV/_custom_mixins.scss */
+  UL.tabs li a {
+    -webkit-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+  }
+}
+
+/* procura messages */
+/* line 90, ../../../sass/themes/procuraACV/theme.scss */
+.elgg-head.clearfix {
+  display: none;
+}
+
+/* line 95, ../../../sass/themes/procuraACV/theme.scss */
+.message-list-header {
+  padding: 0 4em;
+}
+
+/* line 99, ../../../sass/themes/procuraACV/theme.scss */
+DIV.messages-timestamp-cab {
+  margin-left: 40px;
+}
+
+/* line 103, ../../../sass/themes/procuraACV/theme.scss */
+.elgg-button-new-message {
+  float: right;
+  border-style: solid;
+  border-width: 1px;
+  cursor: "pointer";
+  font-family: inherit;
+  font-weight: bold;
+  line-height: normal;
+  margin: 0 0 0.75em;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding-top: 0.9em;
+  padding-right: 1.8em;
+  padding-bottom: 0.9625em;
+  padding-left: 1.8em;
+  font-size: 0.775em;
+  background-color: #7ba736;
+  border-color: #5f802a;
+  color: white;
+  -webkit-border-radius: 1.8em;
+  border-radius: 1.8em;
+}
+/* line 122, ../../../sass/init/foundation/components/_buttons.scss */
+.elgg-button-new-message:hover, .elgg-button-new-message:focus {
+  background-color: #5f802a;
+}
+/* line 133, ../../../sass/init/foundation/components/_buttons.scss */
+.elgg-button-new-message:hover, .elgg-button-new-message:focus {
+  color: white;
+}
+
+/* line 108, ../../../sass/themes/procuraACV/theme.scss */
+.messages-container {
+  padding: 1em 2em;
+  min-height: 668px;
+}
+/* line 112, ../../../sass/themes/procuraACV/theme.scss */
+.messages-container .elgg-list.elgg-list-entity {
+  overflow: initial;
+}
+/* line 113, ../../../sass/themes/procuraACV/theme.scss */
+.messages-container .elgg-list > li {
+  border: 0;
+}
+
+/* line 117, ../../../sass/themes/procuraACV/theme.scss */
+.message {
+  margin-bottom: 4px;
+  -webkit-border-radius: 10px 10px;
+  -moz-border-radius: 10px / 10px;
+  border-radius: 10px / 10px;
+}
+/* line 120, ../../../sass/themes/procuraACV/theme.scss */
+.message.read {
+  border-bottom: solid 0.15em #dddddd;
+}
+/* line 123, ../../../sass/themes/procuraACV/theme.scss */
+.message.unread {
+  font-weight: bold;
+  background-color: #dddddd;
+}
+/* line 126, ../../../sass/themes/procuraACV/theme.scss */
+.message.unread a {
+  color: black;
+}
+/* line 128, ../../../sass/themes/procuraACV/theme.scss */
+.message:hover {
+  background-color: #4b86a4;
+}
+/* line 130, ../../../sass/themes/procuraACV/theme.scss */
+.message:hover a {
+  color: #fff;
+}
+/* line 133, ../../../sass/themes/procuraACV/theme.scss */
+.message > .elgg-body .messages-delete {
+  top: 4px;
+  right: -4px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+/* line 138, ../../../sass/themes/procuraACV/theme.scss */
+.message > .elgg-body .messages-timestamp {
+  position: inherit;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+/* line 148, ../../../sass/themes/procuraACV/theme.scss */
+.procura-message,
+.elgg-form-procura-messages-reply {
+  padding: 1.7em;
+}
+
+/* procura_notifications */
+/* line 154, ../../../sass/themes/procuraACV/theme.scss */
+.procura-notifications {
+  background-color: #fff;
+  padding: 1.2em;
+  min-height: 740px;
+}
+
+/* line 160, ../../../sass/themes/procuraACV/theme.scss */
+.notification-unread-count {
+  padding-top: 0.4em;
+  padding-left: 0.6em;
+  font-size: 0.8em;
+}
+
+/* line 166, ../../../sass/themes/procuraACV/theme.scss */
+.notifications-header {
+  overflow: hidden;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid gray;
+}
+/* line 171, ../../../sass/themes/procuraACV/theme.scss */
+.notifications-header div {
+  float: left;
+  padding: 0.2em 1em;
+}
+/* line 175, ../../../sass/themes/procuraACV/theme.scss */
+.notifications-header a {
+  color: #666666;
+}
+/* line 177, ../../../sass/themes/procuraACV/theme.scss */
+.notifications-header a:hover {
+  color: #3183d1;
+}
+
+/* line 182, ../../../sass/themes/procuraACV/theme.scss */
+.notification {
+  -webkit-border-radius: 10px 10px;
+  -moz-border-radius: 10px / 10px;
+  border-radius: 10px / 10px;
+  margin: 1.2em 0.6em;
+  padding: 0.4em;
+  font-size: 0.8em;
+  overflow: hidden;
+}
+/* line 183, ../../../sass/themes/procuraACV/theme.scss */
+.notification.notification-priority-level1 {
+  background-color: #ddedd3;
+}
+/* line 184, ../../../sass/themes/procuraACV/theme.scss */
+.notification.notification-priority-level2 {
+  background-color: #ededd5;
+}
+/* line 185, ../../../sass/themes/procuraACV/theme.scss */
+.notification.notification-priority-level3 {
+  background-color: #f9dee0;
+}
+/* line 187, ../../../sass/themes/procuraACV/theme.scss */
+.notification:hover {
+  background-color: #4b86a4;
+}
+/* line 192, ../../../sass/themes/procuraACV/theme.scss */
+.notification div {
+  float: left;
+  vertical-align: middle;
+  padding-top: 0.8em;
+}
+/* line 197, ../../../sass/themes/procuraACV/theme.scss */
+.notification.unread .notification-msg {
+  font-weight: bold;
+}
+/* line 200, ../../../sass/themes/procuraACV/theme.scss */
+.notification .notification-date {
+  width: 10%;
+}
+/* line 201, ../../../sass/themes/procuraACV/theme.scss */
+.notification .notification-from {
+  width: 10%;
+}
+/* line 202, ../../../sass/themes/procuraACV/theme.scss */
+.notification .notification-msg {
+  width: 60%;
+}
+/* line 203, ../../../sass/themes/procuraACV/theme.scss */
+.notification .notification-delete {
+  width: 15%;
+  padding-top: 0;
+}
+/* line 207, ../../../sass/themes/procuraACV/theme.scss */
+.notification fieldset {
+  margin: 0;
+  background: none;
+  border: 0;
+}
+/* line 211, ../../../sass/themes/procuraACV/theme.scss */
+.notification fieldset .elgg-button {
+  margin: 0;
 }
